@@ -24,13 +24,47 @@ body {
 }
 
 /* Increase the font size of the heading */
-.header h1 {
-  font-size: 55px;
+.container h1 {
+  font-size: 75px;
+  text-align: center;
+}
+
+/*Transparent header */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 25px;
+}
+
+.container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;
+  max-width: 100%;
+  max-height: 300px;
+  height: auto;
+}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.25); /* Black background with 0.5 opacity */
+  color: rgb(255, 255, 255);
+  width: 100%;
+  padding: 35px;
 }
 
 /* Increase the font size of the subheading */
-.header h2 {
-  font-size: 20px;
+.container h2 {
+  text-align: center;
+  font-size: 25px;
 }
 
 /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
@@ -127,9 +161,12 @@ body {
 </head>
 <body>
 
-<div class="header">
-  <h1>Ness' CPU</h1>
-  <h2>For all your PC repair needs!</h2>
+<div class="container">
+  <img src="motherboard.jpg" alt="Notebook" style="width:100%;">
+  <div class="content">
+    <h1>Ness' CPU</h1>
+    <h2>For all your PC reapir needs!</h2>
+  </div>
 </div>
 
 <div class="navbar">
