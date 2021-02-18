@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Tahoma, Verdana, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 35px;
+  text-align: center;
+  background: #00A2FF;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 55px;
+}
+
+/* Increase the font size of the subheading */
+.header h2 {
+  font-size: 20px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #D7E2E8;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #FE4545;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 25%;
+  background-color: #f1f1f1;
+  padding: 18px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 18px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #aaa;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Ness' CPU</h1>
+  <h2>For all your PC repair needs!</h2>
+</div>
+
+<div class="navbar">
+  <a href="home_page.html" >Home</a>
+  <a href="services_page.html">Services</a>
+  <a href="#">Order</a>
+  <a href="about_us.html" class="right active" >About Us</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>What We Do</h2>
+    <h3>Our logo!</h3>
+    <img src="ness_cpu.png" style="height:300px;">
+    <h3>Our work!</h3>
+    <img src="computer.jpg" style="height:300px;">
+    <br>
+    <img src="part.jpg".jpg" style="height:300px;">
+    <br>
+    <img src="mess.jpg".jpg" style="height:266px;">
+  </div>
+  <div class="main">
+    <h2>Who are we?</h2>
+    <p>We moved from Southern Pennsylvania to the Northern Virginia area in 2020.</p>
+    <img src="meeting.jpg" style="height:350px;">
+    <p>We were looking to get into a more populated area and expand our business. We have met many people since moving here and love every bit of it!</p>
+    <br>
+    <h3>We have decades of experience in our staff!</h3>
+    <img src="harddrive.png" style="height:350px;">
+    <p>We are a small company, but have very skilled people on board. Computers are our passion and we hope to make your experience with them even better!</p>
+    <br>
+    <br>
+    <div style="position:relative;">
+      <div style="opacity:0.5;position:absolute;left:50px;top:-30px;width:300px;height:150px;background-color:#40B3DF"></div>
+      <div style="opacity:0.3;position:absolute;left:120px;top:20px;width:100px;height:170px;background-color:#73AD21"></div>
+      <div style="margin-top:30px;width:360px;height:130px;padding:20px;border-radius:10px;border:10px solid #EE872A;font-size:120%;">
+        <h1>We make the parts work!</h1>
+        <div style="letter-spacing:12px;font-size:15px;position:relative;left:25px;top:25px;">Everything</div>
+        <div style="color:#40B3DF;letter-spacing:12px;font-size:15px;position:relative;left:25px;top:30px;">Comes
+        <span style="background-color:#B4009E;color:#ffffff;"> Together</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Follow us on: (TBD)</h2>
+</div>
+
+</body>
+</html>
