@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Page Title</title>
+<title>Order Page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="mystyle.css">
+<script defer src="login-page.js"></script>
 </head>
 
 
 <body>
 
+<!-- Header -->
 <div class="container">
   <img src="motherboard.jpg" alt="Notebook" style="width:100%;">
   <div class="content">
@@ -26,6 +25,7 @@
   </div>
 </div>
 
+<!-- Navigation Bar -->
 <div class="navbar">
   <a href="index.html" >Home</a>
   <a href="services_page.html">Services</a>
@@ -35,43 +35,46 @@
   <a href="employees.html" class="right">Employees</a>
 </div>
 
+<!-- Text Above Login -->
 <div class="row">
   </div>
-  <div class="main">
-    <h2>Welcome to Ness' CPU!</h2>
+  <div class="main center">
+    <h1>Welcome to Ness' CPU!</h1>
   </div>
 </div>
 
     <br>
-    <!-- Login Form -->
-    <h2>Sign In!</h2>
-    <div class="side">
-    <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-      <input type="submit" class="fadeIn fourth" value="Log In">
-    </form>
+<!-- Login Form -->
+<main id="main-holder" class="center">
+  <h1 id="login-header">Login</h1>
+      
+  <div id="login-error-msg-holder">
+    <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+  </div>
+      
+  <form id="login-form">
+    <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+    <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+    <input type="submit" value="Login" id="login-form-submit">
+  </form>
 
-    <!-- Remind Passowrd -->
+    <!-- Remind Password -->
+    <br>
     <div id="formFooter">
       <a class="underlineHover" href="#">Forgot Password?</a>
     </div>
     </div>
-    <br>
-    <br>
 
+    <!-- Sign Up Button -->
     <div class="main">
-      <h2>Sign Up!</h2>
+      <h1>Sign Up!</h1>
         <a class="underlineHover" href="#">Create Account</a>
     </div>
 
-    <br>
-    <br>
-    <div class="main">
-      <h2>Submit Order Form Here!</h2>
-        <a class="underlineHover" href="form.html">Submit Order</a>
-    </div>
 
+<!-- Space beneath Login -->
+<div class="main">
+</div>
         
 </body>
 </html>
