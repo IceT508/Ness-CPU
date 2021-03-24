@@ -1,10 +1,11 @@
-/* Style the body */
+/* Body Style */
 body {
-  font-family: Tahoma, Verdana, sans-serif;
+  font-family: Tahoma, Verdana, sans-serif, Arial;
+  font-size: 25px;
   margin: 0;
 }
 
-/* Header/logo Title */
+/* Header */
 .header {
   padding: 35px;
   text-align: center;
@@ -12,38 +13,37 @@ body {
   color: white;
 }
 
-/* Increase the font size of the heading */
+/* Head Font */
 .container h1 {
   font-size: 75px;
   text-align: center;
 }
 
-/*Transparent header */
+/* Header Transparency */
 * {
   box-sizing: border-box;
 }
 
+/* Centers Entity */
 .center {
   text-align: center
 }
 
-body {
-  font-family: Arial;
-  font-size: 25px;
-}
-
+/* Container */
 .container {
   position: relative;
   max-width: 100%;
   margin: 0 auto;
 }
 
+/* Container for Image */
 .container img {vertical-align: middle;
   max-width: 100%;
   max-height: 300px;
   height: auto;
 }
 
+/* Transparent Overlay */
 .container .content {
   position: absolute;
   bottom: 0;
@@ -54,14 +54,14 @@ body {
   padding: 35px;
 }
 
-/* Increase the font size of the subheading */
+/* H2 Font Size */
 .container h2 {
   text-align: center;
   font-size: 25px;
 }
 
 
-/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+/* Sticky navbar */
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -70,7 +70,7 @@ body {
   top: 0;
 }
 
-/* Style the navigation bar links */
+/* Navigation Bar Stylization */
 .navbar a {
   float: left;
   display: block;
@@ -81,43 +81,42 @@ body {
 }
 
 
-/* Right-aligned link */
+/* Navigation Bar Right Side Link */
 .navbar a.right {
   float: right;
 }
 
-/* Change color on hover */
+/* Changes color on Hover for Navigation Bar */
 .navbar a:hover {
   background-color: #D7E2E8;
   color: black;
 }
 
-/* Active/current link */
+/* Highlights Current Tab */
 .navbar a.active {
   background-color: #FE4545;
   color: white;
 }
 
-/* Column container */
+/* Column Container */
 .row {  
-  display: -ms-flexbox; /* IE10 */
+  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
+/* Smaller Left Side Column */
 .side {
-  -ms-flex: 20%; /* IE10 */
+  -ms-flex: 20%;
   flex: 20%;
   background-color: #f1f1f1;
   padding: 18px;
 }
 
-/* Main column */
+/* Main Larger Column */
 .main {   
-  -ms-flex: 70%; /* IE10 */
+  -ms-flex: 70%;
   flex: 70%;
   background-color: white;
   padding: 18px;
@@ -130,14 +129,14 @@ body {
   background: #aaa;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+/* Stacks Columns on Small Screens */
 @media screen and (max-width: 700px) {
   .row {   
     flex-direction: column;
   }
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+/* Stacks Navigation Bar on Small Screens */
 @media screen and (max-width: 400px) {
   .navbar a {
     float: none;
@@ -145,28 +144,40 @@ body {
   }
 }
 
-  table {
-    width:100%;
-  }
-  table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
-  th, td {
-    padding: 5px;
-    text-align: left;
-  }
-  table.names tr:nth-child(even) {
-    background-color: #eee;
-  }
-  table.names tr:nth-child(odd) {
-    background-color:#fff;
-  }
-  table.names th {
-    background-color: black;
-    color: white
-  }
+/* Table Size */
+table {
+  width:100%;
+}
 
+/* Table Border */
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+  
+/* Table Text */
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+
+/* Even Color Cells on Table */
+table.names tr:nth-child(even) {
+  background-color: #eee;
+}
+
+/* Odd Color Cells on Table */
+table.names tr:nth-child(odd) {
+  background-color:#fff;
+}
+  
+/* Table Colors */
+table.names th {
+  background-color: black;
+  color: white
+}
+
+/* Login Screen Main Holder */
 #main-holder {
   position: absolute;
   right: 30%;
@@ -180,6 +191,7 @@ body {
   box-shadow: 0px 0px 5px 2px black;
 }
 
+/* Login Error Message Holder */
 #login-error-msg-holder {
   width: 100%;
   height: 100%;
@@ -188,6 +200,7 @@ body {
   align-items: center;
 }
 
+/* Login Error Message Text */
 #login-error-msg {
   width: 23%;
   text-align: center;
@@ -201,10 +214,12 @@ body {
   opacity: 0;
 }
 
+/* Error Message Second Line */
 #error-msg-second-line {
   display: block;
 }
 
+/* Login Form Sizing */
 #login-form {
   align-self: flex-start;
   display: grid;
@@ -212,11 +227,13 @@ body {
   align-items: center;
 }
 
+/* Login Form Text */
 .login-form-field::placeholder {
   color: #3a3a3a;
   font-size: 17px;
 }
 
+/* Login Form Outline */
 .login-form-field {
   border: none;
   border-bottom: 1px solid #3a3a3a;
@@ -227,6 +244,7 @@ body {
   padding: 0px 0px 5px 5px;
 }
 
+/* Login Form Submission Text */
 #login-form-submit {
   width: 100%;
   padding: 7px;
