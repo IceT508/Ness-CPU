@@ -26,7 +26,7 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <a href="index.html" >Home</a>
   <a href="services.html">Services</a>
-  <a href="order.html" >Order</a>
+  <a href="order.php" >Order</a>
   <a href="contact.html"class="active" >Contact Us</a>
   <a href="about.html" >About Us</a>
   </nav>
@@ -36,96 +36,43 @@
 </div>
 <div class="main">
 
-<!-- Personal Info -->
-<form class="needs-validation" novalidate>
-  <div class="form-row">
-    <div class="col-md-4 mb-3">
-      <label for="validationTooltip01">First name</label>
-      <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
-      <div class="valid-tooltip">
-        Looks good!
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationTooltip02">Last name</label>
-      <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
-      <div class="valid-tooltip">
-        Looks good!
-      </div>
-    </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationTooltipUsername">Username</label>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-        </div>
-        <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
-        <div class="invalid-tooltip">
-          Please choose a unique and valid username.
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="col-md-6 mb-3">
-      <label for="validationTooltip03">City</label>
-      <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
-      <div class="invalid-tooltip">
-        Please provide a valid city.
-      </div>
-    </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationTooltip04">State</label>
-      <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
-      <div class="invalid-tooltip">
-        Please provide a valid state.
-      </div>
-    </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationTooltip05">Zip</label>
-      <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
-      <div class="invalid-tooltip">
-        Please provide a valid zip.
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <select class="custom-select" required>
-      <option value="">Open this select menu</option>
-      <option value="1">Broken Screen</option>
-      <option value="2">Virus Removal</option>
-      <option value="3">Data Transfer</option>
-      <option value="4">Build Computer</option>
-      <option value="5">Operating System Upgrade</option>
-      <option value="6">Battery Replacement</option>
-      <option value="7">Data Recovery</option>
-      <option value="8">Port Repair</option>
-    </select>
-    <div class="invalid-feedback">Please select a service</div>
-  </div>
+<!-- All previous orders listed here -->
+<h3>All Current Orders</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Job ID</th>
+      <th scope="col">Date Submitted</th>
+      <th scope="col">Customer</th>
+      <th scope="col">Repair Type</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Date Completed</th>
+      <th scope="col">Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">4</th>
+      <td>4/05/2021</td>
+      <td>Leslie Jackson</td>
+      <td>Port Repair</td>
+      <td>$73.99</td>
+      <td><input type="date" class="form-control" id="exampleDate1" aria-describedby="emailHelp"></td>
+      <td><a href="updated_order.html" type="submit" class="btn btn-primary">Submit</a></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>4/06/2021</td>
+      <td>Timothy Sabonis</td>
+      <td>Data Transfer</td>
+      <td>$20.00</td>
+      <td><input type="date" class="form-control" id="exampleDate1" aria-describedby="emailHelp"></td>
+      <td><a href="updated_order.html" type="submit" class="btn btn-primary">Submit</a></td>
+    </tr>
+    <tr>
+  </tbody>
+</table>
 
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Please describe your issue in greater detail</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-  <div class="invalid-feedback">
-        Please describe your issue
-    </div>
-
-  <div class="form-check">
-      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
-      <label class="form-check-label" for="invalidCheck3">
-        Agree to terms and conditions
-      </label>
-       <div class="invalid-feedback">
-        You must agree before submitting.
-    </div>
-  </div>
-
-  <button class="btn btn-primary" type="submit">Submit form</button>
-</form>
-
-</div>
 </div>
   
   <!-- Footer -->

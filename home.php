@@ -1,33 +1,24 @@
-<?php  session_start();   // session starts with the help of this function 
+<?php   session_start();  ?>
 
+<html>
+  <head>
+       <title> Home </title>
+  </head>
+  <body>
+<?php
+      if(!isset($_SESSION['use'])) // If session is not set then redirect to Login Page
+       {
+           header("Location:Login.php");  
+       }
 
-if(isset($_SESSION['use']))   // Checking whether the session is already there or not if 
-                              // true then header redirect it to the home page directly 
- {
-    header("Location:order.php"); 
- }
+          echo $_SESSION['use'];
 
-if(isset($_POST['login']))   // it checks whether the user clicked login button or not 
-{
-     $user = $_POST['user'];
-     $pass = $_POST['pass'];
+          echo "Login Success";
 
-      if($user == "john@gmail.com" && $pass == "1234")  // username is  set to "john@gmail.com"  and Password   
-         {                                   // is 1234 by default     
-
-          $_SESSION['use']=$user;
-
-
-         echo '<script type="text/javascript"> window.open("customer_request.php","_self");</script>';            //  On Successful Login redirects to index.html
-
-        }
-
-        else
-        {
-            echo "Invalid User Name or Password";        
-        }
-}
- ?>
+          echo "<a href='logout.php'> Logout</a> "; 
+?>
+</body>
+</html>
 
 <!doctype html>
 <html lang="en">
@@ -57,7 +48,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a href="index.html" >Home</a>
         <a href="services.html">Services</a>
-        <a href="order.php" >Order</a>
+        <a href="order.html" class="active">Order</a>
         <a href="contact.html" >Contact Us</a>
         <a href="about.html" >About Us</a>
       </nav>
@@ -65,38 +56,10 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 <div class="row">
 </div>
 <div class="main center">
-  <h1>Welcome back!</h1>
+  <h1>Welcome to Ness' CPU!</h1>
 </div>
 </div>
 
-<!-- Login Form -->
-<div class="login">
-<form>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Employee ID</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Employee ID">
-      <small id="emailHelp" class="form-text text-muted">Don't Share Your Employee ID with anyone else.</small>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Remember Me</label>
-    </div>
-    <a href="employee_data.html" type="submit" class="btn btn-primary">Submit</a>
-  </form>
-
-<br>
-    <!-- Remind Password -->
-    <div id="formFooter" class="row">
-        <div class="col">
-            <a class="underlineHover" href="#">Forgot Password?</a>
-         </div>
-    </div>
-
-    </div>
 
   
   <!-- Footer -->
@@ -125,7 +88,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
                 <h1>Need help?</h1>
                 <a href="services.html">Our Services</a>
                 <br>
-                <a href="order.php">Order</a>
+                <a href="order.html">Order</a>
                 <br>
                 <a href="employees.html">Employee Log In</a>
             </div>

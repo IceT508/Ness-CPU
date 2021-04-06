@@ -1,3 +1,34 @@
+<?php  session_start();
+
+// Checks if there is a session and redirects if needed
+if(isset($_SESSION['use']))
+ {
+    header("Location:employees.php"); 
+ }
+
+// Checks if login is clicked
+if(isset($_POST['login']))   
+{
+     $user = $_POST['user'];
+     $pass = $_POST['pass'];
+
+      // employee ID is  set to "100200" and password is 1234 to log in
+      if($user == "100200" && $pass == "1234")
+        {
+          $_SESSION['use']=$user;
+
+        //  On successful login, redirects to employee_data.php
+         echo '<script type="text/javascript"> window.open("employee_data.php","_self");</script>';
+
+        }
+
+        else
+        {
+            echo "Invalid User Name or Password";        
+        }
+}
+ ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -26,7 +57,7 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a href="index.html" >Home</a>
         <a href="services.html">Services</a>
-        <a href="order.html" class="active">Order</a>
+        <a href="order.php" >Order</a>
         <a href="contact.html" >Contact Us</a>
         <a href="about.html" >About Us</a>
       </nav>
@@ -34,29 +65,27 @@
 <div class="row">
 </div>
 <div class="main center">
-  <h1>Welcome to Ness' CPU!</h1>
+  <h1>Welcome back!</h1>
 </div>
 </div>
 
 <!-- Login Form -->
 <div class="login">
-<form>
+<form action="" method="post">
     <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <label for="exampleInputEmail1">Employee ID</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Employee ID" name="user">
+      <small id="emailHelp" class="form-text text-muted">Don't Share Your Employee ID with anyone else.</small>
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pass">
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Remember Me</label>
     </div>
-    <form method="post" action="http://bmgt407.rhsmith.umd.edu/~bmgt407_2021s_27/customer_request.html">
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+    <input type="submit" name="login" value="Login" class="btn btn-primary"></a>
   </form>
 
 <br>
@@ -64,9 +93,6 @@
     <div id="formFooter" class="row">
         <div class="col">
             <a class="underlineHover" href="#">Forgot Password?</a>
-         </div>
-         <div class="col">
-            <a class="underlineHover" href="#">Create Account</a>
          </div>
     </div>
 
@@ -99,9 +125,9 @@
                 <h1>Need help?</h1>
                 <a href="services.html">Our Services</a>
                 <br>
-                <a href="order.html">Order</a>
+                <a href="order.php">Order</a>
                 <br>
-                <a href="employees.html">Employee Log In</a>
+                <a href="employees.php">Employee Log In</a>
             </div>
     </div>
 </div>

@@ -1,24 +1,25 @@
 <?php  session_start();   // session starts with the help of this function 
 
-
-if(isset($_SESSION['use']))   // Checking whether the session is already there or not if 
-                              // true then header redirect it to the home page directly 
+// Checks if there is a session and redirects if needed
+if(isset($_SESSION['use']))
  {
     header("Location:order.php"); 
  }
 
-if(isset($_POST['login']))   // it checks whether the user clicked login button or not 
+// Checks if login is clicked
+if(isset($_POST['login']))
 {
      $user = $_POST['user'];
      $pass = $_POST['pass'];
 
-      if($user == "john@gmail.com" && $pass == "1234")  // username is  set to "john@gmail.com"  and Password   
-         {                                   // is 1234 by default     
+      // user email is  set to "john@gmail.com" and password is 1234 to log in
+      if($user == "john@gmail.com" && $pass == "1234")   
+         {  
 
           $_SESSION['use']=$user;
 
-
-         echo '<script type="text/javascript"> window.open("customer_request.php","_self");</script>';            //  On Successful Login redirects to index.html
+         //  On successful login, redirects to customer_request.php
+         echo '<script type="text/javascript"> window.open("customer_request.php","_self");</script>';
 
         }
 
@@ -57,7 +58,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a href="index.html" >Home</a>
         <a href="services.html">Services</a>
-        <a href="order.php" >Order</a>
+        <a href="order.html" class="active">Order</a>
         <a href="contact.html" >Contact Us</a>
         <a href="about.html" >About Us</a>
       </nav>
@@ -65,27 +66,29 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 <div class="row">
 </div>
 <div class="main center">
-  <h1>Welcome back!</h1>
+  <h1>Welcome to Ness' CPU!</h1>
 </div>
 </div>
 
 <!-- Login Form -->
 <div class="login">
-<form>
+<form action="" method="post">
     <div class="form-group">
-      <label for="exampleInputEmail1">Employee ID</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Employee ID">
-      <small id="emailHelp" class="form-text text-muted">Don't Share Your Employee ID with anyone else.</small>
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="user">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pass">
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Remember Me</label>
     </div>
-    <a href="employee_data.html" type="submit" class="btn btn-primary">Submit</a>
+    <form method="post" action="http://bmgt407.rhsmith.umd.edu/~bmgt407_2021s_27/customer_request.html">
+    <input type="submit" name="login" value="Login" class="btn btn-primary"></a>
+  </form>
   </form>
 
 <br>
@@ -93,6 +96,9 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
     <div id="formFooter" class="row">
         <div class="col">
             <a class="underlineHover" href="#">Forgot Password?</a>
+         </div>
+         <div class="col">
+            <a class="underlineHover" href="#">Create Account</a>
          </div>
     </div>
 
@@ -125,9 +131,9 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
                 <h1>Need help?</h1>
                 <a href="services.html">Our Services</a>
                 <br>
-                <a href="order.php">Order</a>
+                <a href="order.html">Order</a>
                 <br>
-                <a href="employees.html">Employee Log In</a>
+                <a href="employees.php">Employee Log In</a>
             </div>
     </div>
 </div>

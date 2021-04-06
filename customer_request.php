@@ -1,3 +1,24 @@
+<?php   session_start();  ?>
+
+<html>
+  <head>
+       <title> Home </title>
+  </head>
+  <body>
+<?php
+      // redirects when there is no session
+      if(!isset($_SESSION['use']))
+       {
+           header("Location:Login.php");  
+       }
+
+          echo $_SESSION['use'];
+
+          echo " Login Success";
+
+          echo "<a href='logout.php'> Logout</a> "; 
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -202,7 +223,7 @@
                 <br>
                 <a href="order.php">Order</a>
                 <br>
-                <a href="employees.html">Employee Log In</a>
+                <a href="employees.php">Employee Log In</a>
             </div>
     </div>
 </div>
