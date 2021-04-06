@@ -1,76 +1,49 @@
-/* Body Style */
-body {
-  font-family: Tahoma, Verdana, sans-serif, Arial;
-  font-size: 25px;
-  margin: 0;
-}
-
-/* Header */
+/* Header/logo Title */
 .header {
-  padding: 35px;
+  padding: 25px;
   text-align: center;
-  background: #00A2FF;
   color: white;
+  background:rgba(81, 157, 192, 0.377);
+  font-family: fantasy;
+  
 }
 
-/* Head Font */
-.container h1 {
-  font-size: 75px;
-  text-align: center;
+.header img{
+  border-radius: 100px;
+  margin-bottom: 20px;
 }
 
-/* Header Transparency */
-* {
+
+  /* other */
+  * {
   box-sizing: border-box;
 }
 
-/* Centers Entity */
 .center {
   text-align: center
 }
 
-/* Container */
 .container {
   position: relative;
   max-width: 100%;
   margin: 0 auto;
 }
 
-/* Container for Image */
 .container img {vertical-align: middle;
   max-width: 100%;
   max-height: 300px;
   height: auto;
 }
 
-/* Transparent Overlay */
 .container .content {
   position: absolute;
   bottom: 0;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.3); /* Black background with 0.5 opacity */
   color: rgb(255, 255, 255);
   width: 100%;
   padding: 35px;
 }
 
-/* H2 Font Size */
-.container h2 {
-  text-align: center;
-  font-size: 25px;
-}
-
-
-/* Sticky navbar */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-}
-
-/* Navigation Bar Stylization */
+/* navigation */
 .navbar a {
   float: left;
   display: block;
@@ -81,178 +54,210 @@ body {
 }
 
 
-/* Navigation Bar Right Side Link */
+/* Right-aligned link */
 .navbar a.right {
   float: right;
 }
 
-/* Changes color on Hover for Navigation Bar */
+/* Change color on hover */
 .navbar a:hover {
-  background-color: #D7E2E8;
+  background-color: gray;
   color: black;
 }
 
-/* Highlights Current Tab */
+/* Active/current link */
 .navbar a.active {
-  background-color: #FE4545;
+  background-color: #64b6e2;
   color: white;
 }
 
-/* Column Container */
-.row {  
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
 
-/* Smaller Left Side Column */
-.side {
-  -ms-flex: 20%;
-  flex: 20%;
-  background-color: #f1f1f1;
-  padding: 18px;
-}
 
-/* Main Larger Column */
+/* Main column */
 .main {   
   -ms-flex: 70%;
   flex: 70%;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 18px;
 }
 
 /* Footer */
 .footer {
-  padding: 20px;
-  text-align: center;
-  background: #aaa;
-}
-
-/* Stacks Columns on Small Screens */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
-
-/* Stacks Navigation Bar on Small Screens */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-
-/* Table Size */
-table {
-  width:100%;
-}
-
-/* Table Border */
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-  
-/* Table Text */
-th, td {
-  padding: 5px;
-  text-align: left;
-}
-
-/* Even Color Cells on Table */
-table.names tr:nth-child(even) {
-  background-color: #eee;
-}
-
-/* Odd Color Cells on Table */
-table.names tr:nth-child(odd) {
-  background-color:#fff;
-}
-  
-/* Table Colors */
-table.names th {
-  background-color: black;
-  color: white
-}
-
-/* Login Screen Main Holder */
-#main-holder {
-  position: absolute;
-  right: 30%;
-  width: 40%;
-  height: 80%;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0px 0px 5px 2px black;
-}
-
-/* Login Error Message Holder */
-#login-error-msg-holder {
   width: 100%;
+  padding: 50px 0;
+  box-sizing: border-box;
+  overflow:hidden;
+  display:block;
+  background: rgb(97, 94, 94);
+}
+
+.subfooter{
+  display: block;
+  width: 1100px;
   height: 100%;
-  display: grid;
-  justify-items: center;
-  align-items: center;
 }
 
-/* Login Error Message Text */
-#login-error-msg {
-  width: 23%;
-  text-align: center;
-  margin: 0;
-  padding: 5px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #8a0000;
-  border: 1px solid #8a0000;
-  background-color: #e58f8f;
-  opacity: 0;
-}
-
-/* Error Message Second Line */
-#error-msg-second-line {
+.subfooter .container{
+  width:35%;
+  height: 100%;
+  float: left;
   display: block;
 }
 
-/* Login Form Sizing */
-#login-form {
-  align-self: flex-start;
-  display: grid;
-  justify-items: center;
-  align-items: center;
+.subfooter .container img{
+  width: 80px;
+  height: auto;
 }
 
-/* Login Form Text */
-.login-form-field::placeholder {
-  color: #3a3a3a;
-  font-size: 17px;
+.subfooter .footerthird{
+  width:20%;
+  margin-right: 10px;
+  float: left;
+  height: 100%;  
 }
 
-/* Login Form Outline */
-.login-form-field {
-  border: none;
-  border-bottom: 1px solid #3a3a3a;
-  font-size: 17px;
-  margin-bottom: 10px;
-  border-radius: 3px;
-  outline: none;
-  padding: 0px 0px 5px 5px;
-}
-
-/* Login Form Submission Text */
-#login-form-submit {
+.subfooter .footerthird h1{
+  font-size: 22px;
   width: 100%;
-  padding: 7px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-  background-color: #3a3a3a;
-  cursor: pointer;
-  outline: none;
+  margin-bottom: 10px;
 }
+.subfooter .footerthird p{
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.subfooter .footerthird a{
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 5px;
+  color: white;
+}
+
+
+/* Main Page*/
+.statement{
+  text-align: center;
+  font-size: large;
+  padding: 20px 350px;
+}
+.ministatement{
+  font-size: smaller;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* popular section */
+.popular {
+  text-align: center;
+  font-size: large;
+}
+ /* Three image containers (use 25% for four, and 50% for two, etc) */
+ .popular .column {
+  float: left;
+  width: 25%;
+  padding: 40px;
+  border-left: ridge;
+  background-color: rgb(233, 223, 223);
+}
+.popular img{
+  height: 100px;
+  border-radius: 10px;
+}
+
+/* warranty */
+.warranty{
+  padding: 80px 350px;
+  font-size: larger
+}
+
+/* manufacture */
+
+.manufacter h3{
+  text-align: center;
+}
+
+.manufacter img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border-style: outset;
+}
+
+.manufacter .column {
+  float: left;
+  width: 14.28%;
+  padding: 40px;
+
+  background-color: rgb(233, 223, 223);
+}
+
+/* table */
+.table{
+  align-items: center;
+  padding: 40px;
+}
+
+.table .col-sm{
+  border: solid;
+  margin: -2px;
+}
+
+/* login form */
+/* padding top right bottom left */
+.login{
+  padding: 10px 800px 10px 60px;
+  font-size: large;
+}
+
+/* about us */
+
+.me{
+  padding: 20px 400px;
+}
+
+.about{
+  font-size: larger;
+  text-align: center;
+}
+
+
+.about img{
+  width: 280px;
+  height: 240px;
+  border-style: solid;
+  margin-top: 20px;
+}
+
+/* mission */
+.mission{
+  padding: 20px 400px;
+}
+.mission h4{
+  text-align: left;
+  padding-left: 400px;
+}
+
+/* team */
+.team p{
+  text-align: center;
+}
+
+.team .column {
+  float: left;
+  width: 25%;
+  padding: 30px;
+  border-left: ridge;
+  background-color: rgb(233, 223, 223);
+}
+
+.team img{
+  height: 100px;
+  border-radius: 10px;
+}
+
